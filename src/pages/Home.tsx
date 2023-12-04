@@ -27,10 +27,10 @@ const Home = () => {
 
     return (
         <div className="max-h-screen overflow-hidden">
-            <div style={{height: "5vh"}}>
+            <div style={{height: "7vh"}}>
                 <NavBar/>
             </div>
-            <div className="flex" style={{height: "95vh"}}>
+            <div className="flex max-w-full" style={{height: "93vh"}}>
                 <Sidebar/>
                 {videos.length ? (
                     <InfiniteScroll
@@ -40,7 +40,7 @@ const Home = () => {
                         loader={<Spinner/>}
                         height={"100%"}
                     >
-                        <div className="grid gap-y-14 gap-x-8 grid-cols-7 p-8">
+                        <div className="grid gap-y-14 gap-x-8 grid-cols-5 p-8">
                             {
                                 videos.map((item: HomePageVideos) => {
                                     return <Card data={item} key={item.videoId}/>
